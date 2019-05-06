@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - May 6th, 2019
+
+### Changed
+- Block explorer link fix for payouts screen transactions list
+
 ## [1.0.6] - April 10th, 2018
 
 ### Changed
