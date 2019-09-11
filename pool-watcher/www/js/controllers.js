@@ -15,7 +15,7 @@ angular.module('tc.controllers', [])
 
     var doUpdatePools = function () {
         $.ajaxSetup({ cache: false });
-        $.getJSON('https://raw.githubusercontent.com/ArqTras/turtlecoin-pools-json/master/v2/turtlecoin-pools.json', function (data) {
+        $.getJSON('https://supportcryptonight.com/ios/turtlecoin-pools.json', function (data) {
             $.each(data.pools, function (index, pool) {
 
                 var selected = '';
@@ -136,8 +136,8 @@ angular.module('tc.controllers', [])
             $scope.has_results = true;
 
             $scope.miner_stats = stats.stats;
-            $scope.paid_formatted = (Number(stats.stats.paid) / 100).toFixed(2);
-            $scope.balance_formatted = (Number(stats.stats.balance) / 100).toFixed(2);
+            $scope.paid_formatted = (Number(stats.stats.paid) / 1000000000).toFixed(4);
+            $scope.balance_formatted = (Number(stats.stats.balance) / 1000000000).toFixed(4);
             $scope.last_share = $filter('timeAgo')(stats.stats.lastShare);
             $scope.last_payment = null;
 
@@ -258,7 +258,7 @@ angular.module('tc.controllers', [])
                 return {
                     time: $filter('timeAgo')(parseInt(time)),
                     hash: parts[0],
-                    amount: (Number(parts[1]) / 100).toFixed(2)
+                    amount: (Number(parts[1]) / 1000000000).toFixed(4)
                 };
             };
 

@@ -41,6 +41,6 @@ angular.module('tc.filters', [])
 
 .filter('formatTRTL', function() {
   return function(amount) {
-    return (Number(amount) / 100).toFixed(2);
+    return (Number(amount) / 10000000).toFixed(4);
   }
 });
