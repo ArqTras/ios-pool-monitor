@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="lol.turtlecoin.poolwatcher" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>TRTL Pools</name>
+    <name>ARQMA Pools</name>
     <description>
-        Monitoring application for checking your Turtle Coin mining pool and worker status.
+        Monitoring application for checking your ARQMA Coin mining pool and worker status.
     </description>
-    <author email="derpes@protonmail.com" href="https://turtlecoin.lol">
+    <author email="support@arqma.com" href="https://arqma.com">
         derp-derp-derp
     </author>
     <content src="index.html" />

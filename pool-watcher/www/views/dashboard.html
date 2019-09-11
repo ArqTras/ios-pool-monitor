@@ -1,14 +1,14 @@
 <ng-include src="'views/partials/header.html'"></ng-include>
 
 <div class="content_section" ng-hide="loading">
-    
+
     <div ng-show="has_results">
-    
+
         <div class="long_address">
             <strong>Miner</strong><br>
             {{wallet_address}}
         </div>
-        
+
         <div class="content_card">
             <strong>Hash Rate</strong><br>
             <span ng-show="miner_stats.hashrate.length > 1">
@@ -18,27 +18,27 @@
                 No active hashrate reported.
             </span>
         </div>
-        
+
         <div class="content_card">
             <strong>Paid</strong><br>
             <span ng-show="miner_stats.paid > 1">
-                {{paid_formatted}} TRTL
+                {{paid_formatted}} ARQ
             </span>
             <span ng-show="!miner_stats.paid">
                 No payments received from this pool.
             </span>
         </div>
-        
+
         <div class="content_card">
             <strong>Balance</strong><br>
             <span ng-show="miner_stats.balance > 1">
-                {{balance_formatted}} TRTL
+                {{balance_formatted}} ARQ
             </span>
             <span ng-show="!miner_stats.balance">
                 No balance for this pool.
             </span>
         </div>
-        
+
         <div class="content_card">
             <strong>Last Payment</strong><br>
             <span ng-show="last_payment">
@@ -48,7 +48,7 @@
                 No payments yet from this pool.
             </span>
         </div>
-        
+
         <div class="content_card">
             <strong>Last Share</strong><br>
             <span ng-show="miner_stats.lastShare > 1">
@@ -58,7 +58,7 @@
                 No shares submitted to this pool.
             </span>
         </div>
-        
+
         <div class="content_card">
             <strong>Submitted Hashes</strong><br>
             <span ng-show="miner_stats.hashes > 1">
@@ -68,14 +68,14 @@
                 No hashes submitted to this pool.
             </span>
         </div>
-        
+
         <div class="content_card" ng-show="hashrate_chart.length > 0">
             <strong>Hashrate</strong><br>
             <div id="chart"></div>
         </div>
-    
+
     </div>
-    
+
     <div class="content_card" ng-hide="has_results" style="margin-top: 20px;">
         {{custom_error}}<br>
         <a href="#!/home?reset=address">Try a different pool?</a>
